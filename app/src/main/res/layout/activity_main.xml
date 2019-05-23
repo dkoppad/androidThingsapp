@@ -61,4 +61,16 @@
             android:max="100"/>
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="80dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/motor_speed" />
+
 </LinearLayout>
