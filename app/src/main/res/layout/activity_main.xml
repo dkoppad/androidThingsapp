@@ -2,8 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,6 +11,24 @@
         android:padding="30dp">
 
         <TextView
+            android:id="@+id/temp"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <TextView
+
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:text="@string/red_name" />
@@ -25,22 +42,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:orientation="horizontal"
         android:padding="30dp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="102dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/green_name" />
 
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="@string/green_name" />
         <SeekBar
             android:id="@+id/greenbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:baselineAligned="false"
             android:max="100" />
     </LinearLayout>
 
@@ -61,16 +74,77 @@
             android:max="100"/>
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="80dp" />
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-    <TextView
-        android:layout_width="50dp"
+        <TextView
+            android:id="@+id/motorSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/motor_speed" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/motor_speed" />
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/adc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="DAC" />
+
+        <EditText
+            android:id="@+id/dac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="DAC" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/adc1"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/adc2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/adc3"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp" />
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
